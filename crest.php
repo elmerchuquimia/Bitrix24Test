@@ -18,6 +18,7 @@
 
 	class CRest
 	{
+		const VERSION = '1.36';
 		const BATCH_COUNT    = 50;//count batch 1 query
 		const TYPE_TRANSPORT = 'json';// json or xml
 
@@ -104,7 +105,7 @@
 					curl_setopt($obCurl, CURLOPT_URL, $url);
 					curl_setopt($obCurl, CURLOPT_RETURNTRANSFER, true);
 					curl_setopt($obCurl, CURLOPT_POSTREDIR, 10);
-					curl_setopt($obCurl, CURLOPT_USERAGENT, 'Bitrix24 CRest PHP 1.36');
+					curl_setopt($obCurl, CURLOPT_USERAGENT, 'Bitrix24 CRest PHP ' . static::VERSION);
 					if($sPostFields)
 					{
 						curl_setopt($obCurl, CURLOPT_POST, true);
